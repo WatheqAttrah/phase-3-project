@@ -13,7 +13,7 @@ class Maker(Base):
     id = Column(Integer(), primary_key=True)
     maker = Column(String(), unique=True, nullable=False)
     
-    models = relationship("Model", backref=backref("model"))
+    models = relationship("Model", backref=backref("models"))
 
     def __repe__(self):
         return f"Maker(id={self.id}, " + \
