@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from helpers import view_cars
+from helpers import view_cars, delete_car
 
 
 def main():
@@ -14,7 +14,7 @@ def main():
         if option == "1":
             view_cars()
         elif option == "2":
-            delete_car()            
+            delete_car()
         elif option == "3":
             print("Exit Application")
             break

@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine 
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models import Maker, Model
 
@@ -10,9 +10,24 @@ session = Session()
 def view_cars():
     session = Session()
     cars = session.query(Model).all()
-    
+
     if not cars:
         print("database Empity")
     else:
         for car in cars:
-            print(f'id:{car.id}, model:{car.model}, year:{car.year}, engine:{car.engine}, price:{car.price}, maker id:{car.maker_id}')
+            print(
+                f"id:{car.id}, model:{car.model}, year:{car.year}, engine:{car.engine}, price:{car.price}, maker id:{car.maker_id}"
+            )
+
+
+def delete_car():
+    session = Session()
+    view_cars()
+    maker_id = input("Enter car id to delete: ")
+    car = session.query(Model).filter_by(id=maker_id).first()
+    if not car:
+        print("Car not found:")
+        return
+    session.delete(car)
+    session.commit()
+    print("Car deleted from database")
