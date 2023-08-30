@@ -7,12 +7,12 @@ engine = create_engine("sqlite:///database.db")
 Base = declarative_base()
 
 
-
 class Maker(Base):
     __tablename__ = "makers"
 
     id = Column(Integer(), primary_key=True)
-
+    maker = Column(String(), unique=True, nullable=False)
+    
     models = relationship("Model", backref=backref("model"))
 
     def __repe__(self):
@@ -27,14 +27,18 @@ class Model(Base):
     model = Column(String(), nullable=True)
     year = Column(Integer(), nullable=True)
     engine = Column(Integer(), nullable=True)
-    price = Column(Float(),)
+    price = Column(
+        Float(),
+    )
 
     maker_id = Column(Integer(), ForeignKey("makers.id"))
 
     def __repr__(self):
-        return  f"Model(id={self.id}, " + \
-                f"model={self.model}, " + \
-                f"year={self.year} " + \
-                f"engine={self.engine}," + \
-                f"price={self.price} " + \
-                f"maker_id={self.maker_id})"
+        return (
+            f"Model(id={self.id}, "
+            + f"model={self.model}, "
+            + f"year={self.year} "
+            + f"engine={self.engine},"
+            + f"price={self.price} "
+            + f"maker_id={self.maker_id})"
+        )
