@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, create_engine, ForeignKey
+from sqlalchemy import Column, Integer, String, Float, create_engine, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 
@@ -23,10 +23,10 @@ class Maker(Base):
 class Model(Base):
     __tablename__ = "models"
 
-    id = Column(Integer(), primary_key=Ture)
+    id = Column(Integer(), primary_key=True)
     model = Column(String(), nullable=True)
-    year = Colum(Integer(), nullable=True)
-    engine = Colum(Integer(), nullable=True)
+    year = Column(Integer(), nullable=True)
+    engine = Column(Integer(), nullable=True)
     price = Column(Float(),)
 
     maker_id = Column(Integer(), ForeignKey("makers.id"))
