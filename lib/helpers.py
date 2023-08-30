@@ -31,3 +31,17 @@ def delete_car():
     session.delete(car)
     session.commit()
     print("Car deleted from database")
+
+
+def export_as_csv():
+    session = Session()
+    cars = session.query(Model).all()
+    session.close()
+
+    with open("lib\cars.csv", "w") as gr:
+        gr.write("id, model, year, engine, price, maker_id\n")
+        for car in cars:
+            gr.write(
+                f"{car.id},{car.model},{car.year},{car.engine},{car.price},{car.maker_id}\n"
+            )
+        print("Exported Successfully!!!")
