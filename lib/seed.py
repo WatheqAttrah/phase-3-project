@@ -31,11 +31,12 @@ if __name__ == "__main__":
         session.add(maker)
         session.commit()
 
+        # Store the created makers in a list
         makers.append(maker)
 
     models = []
     for maker in makers:
-        for i in range(random.randint(1, 5)):
+        for i in range(random.randint(1, 6)):
             model = Model(
                 model=fake.name(),
                 year=fake.year(),
