@@ -11,18 +11,20 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    print("~~~~~Clearing old data~~~~~")
+    print("~~~~~Clearing out all data~~~~~")
+    # Delete all old data from the Maker and Model tables
     session.query(Maker).delete()
     session.query(Model).delete()
 
+    # Create a Faker instance for generating fake data
     fake = Faker()
 
     print("~~~~~~Seeding data~~~~~~")
 
-    maker_list = ["Toyota", "Nissan", "Ford", "Chevrolet", "Jeep"]
+    maker_list = ["Toyota", "Nissan", "Ford", "Chevrolet", "Jeep", "BMW"]
 
     makers = []
-    for i in range(5):
+    for i in range(6):
         maker = Maker(maker=maker_list[i])
 
         # add and commit individually to get IDs back
