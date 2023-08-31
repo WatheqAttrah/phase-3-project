@@ -6,6 +6,7 @@ from sqlalchemy.orm import sessionmaker
 from models import Maker, Model
 
 if __name__ == "__main__":
+    # Create a database engine and session
     engine = create_engine("sqlite:///database.db")
     Session = sessionmaker(bind=engine)
     session = Session()
