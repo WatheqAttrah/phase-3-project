@@ -1,4 +1,4 @@
 id, model, year, engine, price, maker_id
-1,Austin Fox,2022,4,22155.0,1
-2,Jacqueline Cameron,2017,4,24213.0,1
-3,Kristi Miller,1971,4,16572.0,1
+Car Id:1, Car Model:Austin Fox, Car Year: 2022, Car Engine: 4,Car Price: 22155.0, Car Maker: 1
+Car Id:2, Car Model:Jacqueline Cameron, Car Year: 2017, Car Engine: 4,Car Price: 24213.0, Car Maker: 1
+Car Id:3, Car Model:Kristi Miller, Car Year: 1971, Car Engine: 4,Car Price: 16572.0, Car Maker: 1

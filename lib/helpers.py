@@ -42,6 +42,6 @@ def export_as_csv():
         gr.write("id, model, year, engine, price, maker_id\n")
         for car in cars:
             gr.write(
-                f"{car.id},{car.model},{car.year},{car.engine},{car.price},{car.maker_id}\n"
+                f"Car Id:{car.id}, Car Model:{car.model}, Car Year: {car.year}, Car Engine: {car.engine},Car Price: {car.price}, Car Maker: {car.maker_id}\n"
             )
         print("Exported Successfully!!!")

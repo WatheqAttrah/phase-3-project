@@ -1,31 +1,24 @@
-
+# Import necessary libraries
 from faker import Faker
 import random
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-
 from models import Maker, Model
 
-if __name__ == '__main__':
-    engine = create_engine('sqlite:///database.db')
+if __name__ == "__main__":
+    engine = create_engine("sqlite:///database.db")
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    print("Clearing old data")
+    print("~~~~~Clearing old data~~~~~")
     session.query(Maker).delete()
     session.query(Model).delete()
 
     fake = Faker()
 
-    print("Seeding data")
+    print("~~~~~~Seeding data~~~~~~")
 
-    maker_list = ["Toyota", 
-                     "Nissan", 
-                     "Ford",
-                     "Chevrolet",
-                     "Jeep"
-                     ]
+    maker_list = ["Toyota", "Nissan", "Ford", "Chevrolet", "Jeep"]
 
     makers = []
     for i in range(5):
@@ -39,19 +32,19 @@ if __name__ == '__main__':
 
     models = []
     for maker in makers:
-        for i in range(random.randint(1,5)):
+        for i in range(random.randint(1, 5)):
             model = Model(
-		        model=fake.name(),
-                year = fake.year(),
-                engine = random.choice((4, 6)),
-		        price=random.randint(15000, 40000),
-                maker_id=maker.id
+                model=fake.name(),
+                year=fake.year(),
+                engine=random.choice((4, 6)),
+                price=random.randint(15000, 40000),
+                maker_id=maker.id,
             )
 
             models.append(model)
-    
+
     session.bulk_save_objects(models)
     session.commit()
     session.close()
 
-    print("Done seeding")
+    print("~~~~~~Done seeding~~~~~~")
