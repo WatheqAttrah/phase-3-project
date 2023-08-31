@@ -38,6 +38,14 @@ def delete_car():
     session.commit()
     print("Car deleted from database")
 
+# Function to count the number of records in the Model table
+def count_cars():
+    session = Session()
+    # Use the .query().count() method to count records in the table
+    record_count = session.query(Model).count().all()
+    session.close()  # Close the session
+    return record_count
+
 # Function to export car data to a CSV file
 def export_as_csv():
     session = Session()
