@@ -25,10 +25,10 @@ def view_cars():
                 f"id:{car.id}, model:{car.model}, year:{car.year}, engine:{car.engine}, price:{car.price}, maker id:{car.maker_id}"
             )
 
-
+# Function to delete a car from the database
 def delete_car():
     session = Session()
-    view_cars()
+    view_cars() # Call the view_cars function to display the list of cars
     maker_id = input("Enter car id to delete: ")
     car = session.query(Model).filter_by(id=maker_id).first()
     if not car:
@@ -38,7 +38,7 @@ def delete_car():
     session.commit()
     print("Car deleted from database")
 
-
+# Function to export car data to a CSV file
 def export_as_csv():
     session = Session()
     cars = session.query(Model).all()
