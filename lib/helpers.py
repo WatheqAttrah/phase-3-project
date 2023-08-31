@@ -2,17 +2,23 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models import Maker, Model
 
+# Create a database engine for SQLite using the specified file
 engine = create_engine("sqlite:///database.db")
+# Create a session factory to manage interactions with the database
 Session = sessionmaker(bind=engine)
+# Create a session object for database operations
 session = Session()
 
 
+# Function to view cars in the database
 def view_cars():
+    # Create a new session for querying
     session = Session()
+    # Query all car models from the Model table
     cars = session.query(Model).all()
-
+    # Print message if the specified car ID is not found
     if not cars:
-        print("database Empity")
+        print("~~~~Database Empity~~~~")
     else:
         for car in cars:
             print(
@@ -36,7 +42,7 @@ def delete_car():
 def export_as_csv():
     session = Session()
     cars = session.query(Model).all()
-    session.close()
+    session.close()  # Close the session
 
     with open("lib\cars.csv", "w") as gr:
         gr.write("id, model, year, engine, price, maker_id\n")
