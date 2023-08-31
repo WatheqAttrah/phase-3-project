@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 
-from helpers import view_cars, delete_car, export_as_csv
+from helpers import view_cars, delete_car, export_as_csv, count_cars
 
 
 def main():
     while True:
-        print("Menu: ")
+        print("Menu: Select one:")
+
         print("1. View Cars")
         print("2. Delete Car")
-        print("3. Export as csv file")
-        print("4. Exit")
+        print("3. Count Cars")
+        print("4. Export as csv file")
+        print("5. Exit")
 
         option = input("Enter Your Option: ")
         if option == "1":
@@ -17,9 +19,11 @@ def main():
         elif option == "2":
             delete_car()
         elif option == "3":
-            export_as_csv()
+            count_cars()
         elif option == "4":
-            print("Exit Application")
+            export_as_csv()
+        elif option == "5" or "exit" or "EXIT" or "Exit":
+            print("~~~~~Exit Application~~~~~~~~~")
             break
 
 

@@ -25,10 +25,11 @@ def view_cars():
                 f"id:{car.id}, model:{car.model}, year:{car.year}, engine:{car.engine}, price:{car.price}, maker id:{car.maker_id}"
             )
 
+
 # Function to delete a car from the database
 def delete_car():
     session = Session()
-    view_cars() # Call the view_cars function to display the list of cars
+    view_cars()  # Call the view_cars function to display the list of cars
     maker_id = input("Enter car id to delete: ")
     car = session.query(Model).filter_by(id=maker_id).first()
     if not car:
@@ -38,13 +39,16 @@ def delete_car():
     session.commit()
     print("Car deleted from database")
 
+
 # Function to count the number of records in the Model table
 def count_cars():
     session = Session()
     # Use the .query().count() method to count records in the table
-    record_count = session.query(Model).count().all()
+    record_count = session.query(Model).count()
     session.close()  # Close the session
-    return record_count
+    print(f"Total number of cars in the Model table: {record_count}")
+    pass
+
 
 # Function to export car data to a CSV file
 def export_as_csv():

@@ -1,4 +1,23 @@
 id, model, year, engine, price, maker_id
-Car Id:1, Car Model:Austin Fox, Car Year: 2022, Car Engine: 4,Car Price: 22155.0, Car Maker: 1
-Car Id:2, Car Model:Jacqueline Cameron, Car Year: 2017, Car Engine: 4,Car Price: 24213.0, Car Maker: 1
-Car Id:3, Car Model:Kristi Miller, Car Year: 1971, Car Engine: 4,Car Price: 16572.0, Car Maker: 1
+Car Id:1, Car Model:Jean Hicks, Car Year: 2016, Car Engine: 4,Car Price: 31491.0, Car Maker: 1
+Car Id:2, Car Model:Christopher Williams, Car Year: 2003, Car Engine: 4,Car Price: 28645.0, Car Maker: 1
+Car Id:3, Car Model:Christopher Farrell, Car Year: 2019, Car Engine: 4,Car Price: 37647.0, Car Maker: 1
+Car Id:4, Car Model:Linda Valdez, Car Year: 1976, Car Engine: 6,Car Price: 33657.0, Car Maker: 2
+Car Id:5, Car Model:Isaiah Anderson, Car Year: 1994, Car Engine: 6,Car Price: 27265.0, Car Maker: 3
+Car Id:6, Car Model:Michael Brennan, Car Year: 2001, Car Engine: 4,Car Price: 23937.0, Car Maker: 3
+Car Id:7, Car Model:Tammy Roth, Car Year: 1997, Car Engine: 6,Car Price: 34287.0, Car Maker: 3
+Car Id:8, Car Model:Gary Carter, Car Year: 1974, Car Engine: 4,Car Price: 15185.0, Car Maker: 3
+Car Id:9, Car Model:Haley King, Car Year: 2021, Car Engine: 4,Car Price: 30919.0, Car Maker: 3
+Car Id:11, Car Model:Sara Cook, Car Year: 1977, Car Engine: 6,Car Price: 37068.0, Car Maker: 4
+Car Id:12, Car Model:Todd Taylor, Car Year: 2000, Car Engine: 4,Car Price: 16456.0, Car Maker: 4
+Car Id:13, Car Model:Jessica Ramirez, Car Year: 1986, Car Engine: 6,Car Price: 38476.0, Car Maker: 4
+Car Id:14, Car Model:Angela Gaines, Car Year: 1996, Car Engine: 6,Car Price: 25779.0, Car Maker: 4
+Car Id:15, Car Model:Susan Arnold, Car Year: 1995, Car Engine: 4,Car Price: 39657.0, Car Maker: 4
+Car Id:16, Car Model:Bryan Chapman, Car Year: 1979, Car Engine: 4,Car Price: 22967.0, Car Maker: 5
+Car Id:17, Car Model:Matthew Chavez, Car Year: 2016, Car Engine: 4,Car Price: 23868.0, Car Maker: 5
+Car Id:18, Car Model:Cynthia King, Car Year: 2016, Car Engine: 4,Car Price: 32112.0, Car Maker: 6
+Car Id:19, Car Model:Christopher Porter, Car Year: 1996, Car Engine: 4,Car Price: 39679.0, Car Maker: 6
+Car Id:20, Car Model:Sarah Thompson, Car Year: 2007, Car Engine: 6,Car Price: 39025.0, Car Maker: 6
+Car Id:21, Car Model:Sarah Logan, Car Year: 1986, Car Engine: 4,Car Price: 34587.0, Car Maker: 6
+Car Id:22, Car Model:Jonathan Rodriguez, Car Year: 2006, Car Engine: 4,Car Price: 38904.0, Car Maker: 6
+Car Id:23, Car Model:Joseph Delgado, Car Year: 2006, Car Engine: 4,Car Price: 20208.0, Car Maker: 6
