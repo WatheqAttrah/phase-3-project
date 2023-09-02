@@ -8,8 +8,9 @@ def main():
     while True:
         print("\n" * 30)
         print("welcome to:")
-        print(blue( 
-            """ 
+        print(
+            blue(
+                """ 
               
 
 
@@ -24,8 +25,10 @@ def main():
                           ███    ███                                                                                                                       
 
               
-              """))
-        print("Menu: Select one:")
+              """
+            )
+        )
+        print(yellow("Menu: Select one:"))
 
         print("1. View Cars")
         print("2. Delete Car")
