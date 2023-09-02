@@ -56,7 +56,7 @@ def export_as_csv():
     cars = session.query(Model).all()
     session.close()  # Close the session
 
-    with open("lib\cars.csv", "w") as gr:
+    with open("cars.csv", "w") as gr:
         gr.write("id, model, year, engine, price, maker_id\n")
         for car in cars:
             gr.write(
