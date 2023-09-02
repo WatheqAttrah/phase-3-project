@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 
 from helpers import view_cars, delete_car, export_as_csv, count_cars
+from prettycli import green, yellow, red, blue
 
 
 def main():
     while True:
-        print('\n'*30)
-        print('welcome to:')
-        print(''' 
+        print("\n" * 30)
+        print("welcome to:")
+        print(blue( 
+            """ 
               
 
 
@@ -22,7 +24,7 @@ def main():
                           ███    ███                                                                                                                       
 
               
-              ''')
+              """))
         print("Menu: Select one:")
 
         print("1. View Cars")
