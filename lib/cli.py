@@ -30,13 +30,13 @@ def main():
         )
         print(yellow("Menu: Select one:"))
 
-        print("1. View Cars")
-        print("2. Delete Car")
-        print("3. Count Cars")
-        print("4. Export as csv file")
-        print("5. Exit")
+        print(green("1. View Cars"))
+        print(green("2. Delete Car"))
+        print(green("3. Count Cars"))
+        print(green("4. Export as csv file"))
+        print(green("5. Exit"))
 
-        option = input("Enter Your Option: ")
+        option = input(red("Enter Your Option: "))
         if option == "1":
             view_cars()
         elif option == "2":
