@@ -41,8 +41,8 @@ def view_one_car():
         print(green("Car Details:"))
         print(f"*) Car ID: {car.id}")
         print(f"*) Car Model: {car.model}")
-        print(f"*) Car Model: {car.year}")
-        print(f"*) Engine: {car.engine}")
+        print(f"*) Car Year: {car.year}")
+        print(f"*) Cae Engine: {car.engine}")
         print(f"*) Price $ {car.price}")
 
 
@@ -66,7 +66,7 @@ def count_cars():
     session = Session()
     # Use the .query().count() method to count records in the table
     record_count = session.query(Model).count()
-    # session.close()  # Close the session
+    session.close()  # Close the session
     print(f"Total number of cars in the Model table: {record_count}")
 
 
@@ -75,6 +75,7 @@ def count_4_cyc_cars():
     session = Session()
     cars_4_cylender = session.query(Model).filter(Model.engine == 4).all()
     count_4 = len(cars_4_cylender)
+    session.close()
     print(f"Total number of cars with 4 cyclender engine: {count_4}")
 
 
@@ -83,6 +84,7 @@ def count_6_cyc_cars():
     session = Session()
     cars_6_cylender = session.query(Model).filter(Model.engine == 6).all()
     count_6 = len(cars_6_cylender)
+    session.close()
     print(f"Total number of cars with 6 cyclender engine: {count_6}")
 
 
