@@ -11,7 +11,8 @@ from helpers import (
 )
 from prettycli import green, yellow, red, blue
 
-# Define the main function 
+
+# Define the main function
 def main():
     while True:
         print("\n" * 5)
@@ -44,7 +45,7 @@ def main():
         print(green("7. Export as csv file"))
         print(green("8. Exit"))
 
-        choice = input(red("Enter Your Option: "))
+        choice = input(red("Enter Your Choice: "))
         choice = choice.strip()
         if choice == "1":
             view_cars()
@@ -62,6 +63,7 @@ def main():
             export_as_csv()
         elif choice == "8":
             print("~~~~~Exit Application~~~~~~~~~")
+            print("Good Bye")
             break
         else:
             print(red("Invalid choise. Please Try Again."))
