@@ -58,6 +58,6 @@ if __name__ == "__main__":
         session.commit()
         session.close()
     except SQLAlchemyError as e:
-        print(colored(f"An error occurred: {str(e)}", "red"))
+        print(red(f"An error occurred: {str(e)}"))
 
     print("~~~~~~Done seeding~~~~~~")

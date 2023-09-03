@@ -16,7 +16,7 @@ class Maker(Base):
 
     models = relationship("Model", backref=backref("models"))
 
-    def __repr__(self):
+    def __repe__(self):
         return f"Maker(id={self.id}, " + f"maker={self.maker})"
 
 
