@@ -28,7 +28,7 @@ def view_cars():
                     f" Car Id:{car.id}, Car Model:{car.model}, Car Year:{car.year}, engine:{car.engine}, price:{car.price}, maker id:{car.maker_id}"
                 )
 
-    except sqlalchemyError as e:
+    except SQLAlchemyError as e:
         print(red(f"An error occurred: {str(e)}"))
 
 
@@ -73,41 +73,53 @@ def delete_car():
 
 # 4. Function to count the number of records in the Model table
 def count_cars():
-    session = Session()
-    # Use the .query().count() method to count records in the table
-    record_count = session.query(Model).count()
-    session.close()  # Close the session
-    print(f"Total number of cars in the Model table: {record_count}")
+    try:
+        session = Session()
+        # Use the .query().count() method to count records in the table
+        record_count = session.query(Model).count()
+        session.close()  # Close the session
+        print(f"Total number of cars in the Model table: {record_count}")
+    except SQLAlchemyError as e:
+        print(red(f"An error occurred: {str(e)}"))
 
 
 # 5. Function count number of cars with 4 Cyclender engine
 def count_4_cyc_cars():
-    session = Session()
-    cars_4_cylender = session.query(Model).filter(Model.engine == 4).all()
-    count_4 = len(cars_4_cylender)
-    session.close()
-    print(f"Total number of cars with 4 cyclender engine: {count_4}")
+    try:
+        session = Session()
+        cars_4_cylender = session.query(Model).filter(Model.engine == 4).all()
+        count_4 = len(cars_4_cylender)
+        session.close()
+        print(f"Total number of cars with 4 cyclender engine: {count_4}")
+    except SQLAlchemyError as e:
+        print(red(f"An error occurred: {str(e)}"))
 
 
 # 6. Function count number of cars with 6 Cyclender engine
 def count_6_cyc_cars():
-    session = Session()
-    cars_6_cylender = session.query(Model).filter(Model.engine == 6).all()
-    count_6 = len(cars_6_cylender)
-    session.close()
-    print(f"Total number of cars with 6 cyclender engine: {count_6}")
+    try:
+        session = Session()
+        cars_6_cylender = session.query(Model).filter(Model.engine == 6).all()
+        count_6 = len(cars_6_cylender)
+        session.close()
+        print(f"Total number of cars with 6 cyclender engine: {count_6}")
+    except SQLAlchemyError as e:
+        print(red(f"An error occurred: {str(e)}"))
 
 
 # 7. Function to export car data to a CSV file
 def export_as_csv():
-    session = Session()
-    cars = session.query(Model).all()
-    session.close()  # Close the session
+    try:
+        session = Session()
+        cars = session.query(Model).all()
+        session.close()  # Close the session
 
-    with open("cars.csv", "w") as gr:
-        gr.write("id, model, year, engine, price, maker_id\n")
-        for car in cars:
-            gr.write(
-                f"Car Id:{car.id}, Car Model:{car.model}, Car Year: {car.year}, Car Engine: {car.engine},Car Price: {car.price}, Car Maker: {car.maker_id}\n"
-            )
-        print("~~~~~~Exported Successfully!!!~~~~~~")
+        with open("cars.csv", "w") as gr:
+            gr.write("id, model, year, engine, price, maker_id\n")
+            for car in cars:
+                gr.write(
+                    f"Car Id:{car.id}, Car Model:{car.model}, Car Year: {car.year}, Car Engine: {car.engine},Car Price: {car.price}, Car Maker: {car.maker_id}\n"
+                )
+            print("~~~~~~Exported Successfully!!!~~~~~~")
+    except SQLAlchemyError as e:
+        print(red(f"An error occurred: {str(e)}"))
