@@ -4,6 +4,8 @@ import random
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models import Maker, Model
+from prettycli import green, yellow, red, blue
+
 
 if __name__ == "__main__":
     # Create a database engine and session
@@ -11,7 +13,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    print("~~~~~Clearing out all data~~~~~")
+    print(yellow("~~~~~Clearing out all data~~~~~"))
     # Delete all old data from the Maker and Model tables
     session.query(Maker).delete()
     session.query(Model).delete()
@@ -19,12 +21,12 @@ if __name__ == "__main__":
     # Create a Faker instance for generating fake data
     fake = Faker()
 
-    print("~~~~~~Seeding data~~~~~~")
+    print(green("~~~~~~Seeding data~~~~~~"))
 
-    maker_list = ["Toyota", "Nissan", "Ford", "Chevrolet", "Jeep", "BMW"]
+    maker_list = ["Toyota", "Nissan", "Ford", "Chevrolet", "Jeep"]
 
     makers = []
-    for i in range(6):
+    for i in range(5):
         maker = Maker(maker=maker_list[i])
 
         # add and commit individually to get IDs back
