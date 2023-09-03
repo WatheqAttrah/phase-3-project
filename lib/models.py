@@ -7,6 +7,7 @@ engine = create_engine("sqlite:///database.db")
 Base = declarative_base()
 
 
+# - class Maker: Represents car makers with fields for id and maker name.
 class Maker(Base):
     __tablename__ = "makers"
 
@@ -15,10 +16,13 @@ class Maker(Base):
 
     models = relationship("Model", backref=backref("models"))
 
-    def __repe__(self):
+    def __repr__(self):
         return f"Maker(id={self.id}, " + f"maker={self.maker})"
 
 
+# - class Model: Represents car models with fields for id,
+# model name, year,engine type, price, and a foreign key maker_id
+# to link to a Maker.
 class Model(Base):
     __tablename__ = "models"
 
