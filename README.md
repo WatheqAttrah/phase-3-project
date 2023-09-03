@@ -35,15 +35,20 @@ before running the code,ensure you have the following dependencies installed
 
 The script provides the following menu options:
 
- - View Cars: Display a list of all cars.
- - View One Car: View details of a specific car by ID.
- - Delete Car: Delete a car record by ID.
- - Count Cars: Count the total number of cars.
- - Cars with 4-Cylinder Engine: Count cars with a 4-cylinder engine.
- - Cars with 6-Cylinder Engine: Count cars with a 6-cylinder engine.
- - Export as CSV File: Export car data to a CSV file.
+ - view_cars(): View Cars| Display a list of all cars.
+ - view_one_car():View one car details of a specific car by ID.
+ - delete_car(): Delete a car record by it's ID.
+ - count_cars(): Count the total number of cars in database.
+ - count_4_cyc_cars(): Count cars with a 4-cylinder engine.
+ - count_6_cyc_cars(): Count the number of cars with a 6-cylinder engine.
+ - export_as_csv(): Export car data to a CSV file.
  - Exit: Quit the application.
 
 ## Error Handling
 
 The script includes error handling to handle exceptions during database operations.
+
+## Data Models
+The code defines two SQLAlchemy models:
+- Maker: Represents car makers with fields for id and maker name.
+- Model: Represents car models with fields for id, model name, year,      engine type, price, and a foreign key maker_id to link to a Maker.
