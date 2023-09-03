@@ -31,7 +31,7 @@ before running the code,ensure you have the following dependencies installed
 - Enter python environmanet: 'pipenv shell'
 - Enter the CLI: 'Python3 lib/cli.py
 
-## Menu Options
+## Menu Options - cli.py
 
 The script provides the following menu options:
 
@@ -44,11 +44,22 @@ The script provides the following menu options:
  - export_as_csv(): Export car data to a CSV file.
  - Exit: Quit the application.
 
-## Error Handling
+## Error Handling - SQLAlchemyError
 
 The script includes error handling to handle exceptions during database operations.
 
-## Data Models
+## Data Models  - models.py
 The code defines two SQLAlchemy models:
-- Maker: Represents car makers with fields for id and maker name.
-- Model: Represents car models with fields for id, model name, year,      engine type, price, and a foreign key maker_id to link to a Maker.
+- class Maker: Represents car makers with fields for id and maker name.
+- class Model: Represents car models with fields for id, model name, year,engine type, price, and a foreign key maker_id to link to a Maker.
+
+## Seeds Fake Database - seed.py
+- Python script for database seeder that uses faker librery to 
+populate a SQLite database with fake car data records for car makers
+and cad modeles 
+- To run the seed.py file, go to the terminal and type the following command:
+    - python3 lib/seed.py
+
+Once the code is ran the new data generated to the database
+
+

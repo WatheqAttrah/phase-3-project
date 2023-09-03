@@ -21,7 +21,7 @@ def view_cars():
         cars = session.query(Model).all()
         # Print message if the specified car ID is not found
         if not cars:
-            print("~~~~Database Empity~~~~")
+            print("~~~~Database Empty~~~~")
         else:
             for car in cars:
                 print(
