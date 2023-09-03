@@ -38,10 +38,10 @@ if __name__ == "__main__":
     for maker in makers:
         for i in range(random.randint(1, 6)):
             model = Model(
-                model=fake.name(), # Generate a fake name for the model
-                year=fake.year(), # Generate a fake year for the model
-                engine=random.choice((4, 6)), # Choose a random engine type (4 or 6)
-                price=random.randint(15000, 40000), # Generate a random price
+                model=fake.name(),  # Generate a fake name for the model
+                year=fake.year(),  # Generate a fake year for the model
+                engine=random.choice((4, 6)),  # Choose a random engine type (4 or 6)
+                price=random.randint(15000, 40000),  # Generate a random price
                 maker_id=maker.id,  # Set the maker ID for the model
             )
             # Store the created models in a list
