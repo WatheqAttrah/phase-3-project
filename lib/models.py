@@ -12,12 +12,11 @@ class Maker(Base):
 
     id = Column(Integer(), primary_key=True)
     maker = Column(String(), unique=True, nullable=False)
-    
+
     models = relationship("Model", backref=backref("models"))
 
     def __repe__(self):
-        return f"Maker(id={self.id}, " + \
-            f"maker={self.maker})"
+        return f"Maker(id={self.id}, " + f"maker={self.maker})"
 
 
 class Model(Base):

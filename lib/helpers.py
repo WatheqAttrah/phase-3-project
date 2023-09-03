@@ -11,7 +11,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 
-# Function to view cars in the database
+# 1. Function to view cars in the database
 def view_cars():
     # Create a new session for querying
     session = Session()
@@ -23,14 +23,34 @@ def view_cars():
     else:
         for car in cars:
             print(
-                f"id:{car.id}, model:{car.model}, year:{car.year}, engine:{car.engine}, price:{car.price}, maker id:{car.maker_id}"
+                f" Car Id:{car.id}, Car Model:{car.model}, Car Year:{car.year}, engine:{car.engine}, price:{car.price}, maker id:{car.maker_id}"
             )
 
 
-# Function to delete a car from the database
+# 2 Function Veiw one car
+def view_one_car():
+    session = Session()
+    view_cars()
+    maker_id = input(yellow("Enter car id to view: "))
+    car = session.query(Model).filter_by(id=maker_id).first()
+    # print({car})
+    if not car:
+        print(red("Invalid car id"))
+    else:
+        # Print individual car details
+        print(green("Car Details:"))
+        print(f"*) Car ID: {car.id}")
+        print(f"*) Car Model: {car.model}")
+        print(f"*) Car Model: {car.year}")
+        print(f"*) Engine: {car.engine}")
+        print(f"*) Price $ {car.price}")
+
+
+# 3. Function to delete a car from the database
 def delete_car():
     session = Session()
     view_cars()  # Call the view_cars function to display the list of cars
+
     maker_id = input(yellow("Enter car id to delete: "))
     car = session.query(Model).filter_by(id=maker_id).first()
     if not car:
@@ -41,17 +61,32 @@ def delete_car():
     print(red("Car deleted from database"))
 
 
-# Function to count the number of records in the Model table
+# 4. Function to count the number of records in the Model table
 def count_cars():
     session = Session()
     # Use the .query().count() method to count records in the table
     record_count = session.query(Model).count()
-    session.close()  # Close the session
+    # session.close()  # Close the session
     print(f"Total number of cars in the Model table: {record_count}")
-    pass
 
 
-# Function to export car data to a CSV file
+# 5. Function count number of cars with 4 Cyclender engine
+def count_4_cyc_cars():
+    session = Session()
+    cars_4_cylender = session.query(Model).filter(Model.engine == 4).all()
+    count_4 = len(cars_4_cylender)
+    print(f"Total number of cars with 4 cyclender engine: {count_4}")
+
+
+# 6. Function count number of cars with 6 Cyclender engine
+def count_6_cyc_cars():
+    session = Session()
+    cars_6_cylender = session.query(Model).filter(Model.engine == 6).all()
+    count_6 = len(cars_6_cylender)
+    print(f"Total number of cars with 6 cyclender engine: {count_6}")
+
+
+# 7. Function to export car data to a CSV file
 def export_as_csv():
     session = Session()
     cars = session.query(Model).all()

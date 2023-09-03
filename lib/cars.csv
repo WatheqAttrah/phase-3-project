@@ -1,12 +1,18 @@
 id, model, year, engine, price, maker_id
-Car Id:6, Car Model:Michael Brennan, Car Year: 2001, Car Engine: 4,Car Price: 23937.0, Car Maker: 3
-Car Id:8, Car Model:Gary Carter, Car Year: 1974, Car Engine: 4,Car Price: 15185.0, Car Maker: 3
-Car Id:9, Car Model:Haley King, Car Year: 2021, Car Engine: 4,Car Price: 30919.0, Car Maker: 3
-Car Id:12, Car Model:Todd Taylor, Car Year: 2000, Car Engine: 4,Car Price: 16456.0, Car Maker: 4
-Car Id:13, Car Model:Jessica Ramirez, Car Year: 1986, Car Engine: 6,Car Price: 38476.0, Car Maker: 4
-Car Id:14, Car Model:Angela Gaines, Car Year: 1996, Car Engine: 6,Car Price: 25779.0, Car Maker: 4
-Car Id:15, Car Model:Susan Arnold, Car Year: 1995, Car Engine: 4,Car Price: 39657.0, Car Maker: 4
-Car Id:17, Car Model:Matthew Chavez, Car Year: 2016, Car Engine: 4,Car Price: 23868.0, Car Maker: 5
-Car Id:18, Car Model:Cynthia King, Car Year: 2016, Car Engine: 4,Car Price: 32112.0, Car Maker: 6
-Car Id:19, Car Model:Christopher Porter, Car Year: 1996, Car Engine: 4,Car Price: 39679.0, Car Maker: 6
-Car Id:20, Car Model:Sarah Thompson, Car Year: 2007, Car Engine: 6,Car Price: 39025.0, Car Maker: 6
+Car Id:1, Car Model:Cynthia Schmidt, Car Year: 2013, Car Engine: 6,Car Price: 20226.0, Car Maker: 1
+Car Id:2, Car Model:Rebecca Davis, Car Year: 1974, Car Engine: 4,Car Price: 16249.0, Car Maker: 1
+Car Id:3, Car Model:Kevin Parker, Car Year: 1985, Car Engine: 6,Car Price: 35439.0, Car Maker: 2
+Car Id:4, Car Model:Caroline Miller, Car Year: 2013, Car Engine: 6,Car Price: 39809.0, Car Maker: 2
+Car Id:5, Car Model:Tyler Johnson, Car Year: 2012, Car Engine: 6,Car Price: 26785.0, Car Maker: 2
+Car Id:6, Car Model:Michael Coleman, Car Year: 1974, Car Engine: 4,Car Price: 20410.0, Car Maker: 3
+Car Id:7, Car Model:Jacqueline Booth, Car Year: 2011, Car Engine: 6,Car Price: 21159.0, Car Maker: 3
+Car Id:8, Car Model:Emily Moore, Car Year: 1972, Car Engine: 4,Car Price: 36226.0, Car Maker: 3
+Car Id:9, Car Model:William Wilson, Car Year: 2017, Car Engine: 4,Car Price: 27413.0, Car Maker: 3
+Car Id:10, Car Model:Kimberly Gilbert, Car Year: 1999, Car Engine: 6,Car Price: 23514.0, Car Maker: 3
+Car Id:11, Car Model:Stuart Frye, Car Year: 1980, Car Engine: 6,Car Price: 22955.0, Car Maker: 3
+Car Id:12, Car Model:Ricky Torres, Car Year: 1979, Car Engine: 4,Car Price: 17580.0, Car Maker: 4
+Car Id:13, Car Model:Heather Jones, Car Year: 1994, Car Engine: 6,Car Price: 16168.0, Car Maker: 4
+Car Id:14, Car Model:Kayla Zimmerman, Car Year: 2014, Car Engine: 6,Car Price: 18763.0, Car Maker: 5
+Car Id:15, Car Model:John Welch, Car Year: 2005, Car Engine: 6,Car Price: 36848.0, Car Maker: 5
+Car Id:16, Car Model:Brianna Lin, Car Year: 2015, Car Engine: 4,Car Price: 26680.0, Car Maker: 5
+Car Id:17, Car Model:Rebekah Dickerson DDS, Car Year: 1983, Car Engine: 6,Car Price: 29635.0, Car Maker: 5
