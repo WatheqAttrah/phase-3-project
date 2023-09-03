@@ -6,7 +6,7 @@ from prettycli import green, yellow, red, blue
 
 def main():
     while True:
-        # print("\n" * 30)
+        print("\n" * 5)
         print("welcome to:")
         print(
             blue(
@@ -34,6 +34,7 @@ def main():
         print(green("5. Exit"))
 
         choice = input(red("Enter Your Option: "))
+        choice = choice.strip()
         if choice == "1":
             view_cars()
         elif choice == "2":
@@ -42,9 +43,11 @@ def main():
             count_cars()
         elif choice == "4":
             export_as_csv()
-        elif choice == "5" or option.lower() == "exit":
+        elif choice == "5":
             print("~~~~~Exit Application~~~~~~~~~")
             break
+        else:
+            print(red("Invalid choise. Please Try Again."))
 
 
 if __name__ == "__main__":

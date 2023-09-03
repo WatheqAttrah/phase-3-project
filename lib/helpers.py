@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models import Maker, Model
+from prettycli import green, yellow, red, blue
 
 # Create a database engine for SQLite using the specified file
 engine = create_engine("sqlite:///database.db")
@@ -30,14 +31,14 @@ def view_cars():
 def delete_car():
     session = Session()
     view_cars()  # Call the view_cars function to display the list of cars
-    maker_id = input("Enter car id to delete: ")
+    maker_id = input(yellow("Enter car id to delete: "))
     car = session.query(Model).filter_by(id=maker_id).first()
     if not car:
         print("Car not found:")
         return
     session.delete(car)
     session.commit()
-    print("Car deleted from database")
+    print(red("Car deleted from database"))
 
 
 # Function to count the number of records in the Model table
