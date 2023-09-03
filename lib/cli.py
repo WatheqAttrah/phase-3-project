@@ -11,7 +11,7 @@ from helpers import (
 )
 from prettycli import green, yellow, red, blue
 
-
+# Define the main function 
 def main():
     while True:
         print("\n" * 5)
